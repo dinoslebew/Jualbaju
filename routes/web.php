@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\listbarangController;
+use App\Http\Controllers\DatabarangController;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -26,3 +27,4 @@ Route::prefix('admin')->group(function () {
 //});
 
 Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
+Route::get('/databarang', [DataBarangController::class, 'tampilkan']);
